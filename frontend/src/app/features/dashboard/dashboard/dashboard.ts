@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { Sidebar } from '../../../components/sidebar/sidebar';
 import { Header } from '../../../components/header/header';
 import { DashboardStats } from '../../../components/dashboard-stats/dashboard-stats';
 
 import { CourseService } from '../../../services/course';
-import { CommonModule } from '@angular/common';
-
 
 @Component({
   selector: 'app-dashboard',
@@ -24,7 +23,9 @@ export class DashboardComponent implements OnInit {
 
   courses: any[] = [];
 
-  constructor(private courseService: CourseService) {}
+  constructor(
+    private courseService: CourseService
+  ) {}
 
   ngOnInit(): void {
     this.loadCourses();

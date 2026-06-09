@@ -3,10 +3,10 @@
   <div class="card">
     <h3>Progress Overview</h3>
 
-    <p>Web Development — 75%</p>
-    <p>Database Systems — 60%</p>
-    <p>Cloud Computing — 45%</p>
-    <p>AI & ML — 20%</p>
+    <div *ngFor="let item of progress">
+      <p>{{ item.courseName }} — {{ item.completion }}%</p>
+    </div>
+
   </div>
 
   <div class="card">
@@ -36,7 +36,17 @@
 
   <div class="card">
     <h3>Overall Progress</h3>
-    <h2>58%</h2>
+
+    <h2 *ngIf="progress.length >= 3">
+      {{
+        (
+          progress[0].completion +
+          progress[1].completion +
+          progress[2].completion
+        ) / 3
+      }}%
+    </h2>
+
   </div>
 
   <div class="card">
