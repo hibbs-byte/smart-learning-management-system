@@ -1,0 +1,31 @@
+.dashboard-cards{
+  display:flex;
+  gap:25px;
+  margin-top:25px;
+}
+
+.card{
+  flex:1;
+  background:white;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.card h3{
+  color:#2d2424;
+  margin-bottom:20px;
+  font-size:24px;
+}
+
+.card p{
+  margin-bottom:12px;
+  color:#444;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.card h2{
+  font-size:48px;
+  color:#ff8a65;
+}

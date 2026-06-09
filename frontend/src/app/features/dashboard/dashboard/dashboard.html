@@ -1,86 +1,12 @@
 <div class="dashboard-container">
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
-
-    <div class="logo-section">
-      <h1>SLMS</h1>
-      <p>Smart Learning Management System</p>
-    </div>
-
-    <nav class="menu">
-
-      <div class="menu-item active">
-        📊 Dashboard
-      </div>
-
-      <div class="menu-item">
-        📚 Courses
-      </div>
-
-      <div class="menu-item">
-        📝 Enrollment
-      </div>
-
-      <div class="menu-item">
-        📈 Progress
-      </div>
-
-      <div class="menu-item">
-        🏆 Certificates
-      </div>
-
-      <div class="menu-item">
-        📄 Reports
-      </div>
-
-    </nav>
-
-    <div class="quote-card">
-      <p>
-        The meaning of life is to find your gift.
-        The purpose of life is to give it away.
-      </p>
-
-      <span>— Pablo Picasso</span>
-    </div>
-
-    <button class="logout-btn">
-      Logout
-    </button>
-
+    <app-sidebar></app-sidebar>
   </aside>
 
-  <!-- MAIN CONTENT -->
   <main class="content">
 
-    <!-- HEADER -->
-    <div class="top-bar">
-
-      <div class="welcome-section">
-        <h1>Good Morning, User</h1>
-        <p>Every day is a chance to learn something beautiful.</p>
-      </div>
-
-      <div class="header-actions">
-
-        <input
-          type="text"
-          placeholder="Search courses, lessons..."
-          class="search-box"
-        />
-
-        <button class="icon-btn">🔔</button>
-
-        <div class="profile-circle">
-          U
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- KNOWLEDGE TREE -->
+    <app-header></app-header>
 
     <div class="knowledge-tree">
 
@@ -112,59 +38,7 @@
 
     </div>
 
-    <!-- FIRST ROW -->
-
-    <div class="dashboard-cards">
-
-      <div class="card">
-        <h3>Progress Overview</h3>
-
-        <p>Web Development — 75%</p>
-        <p>Database Systems — 60%</p>
-        <p>Cloud Computing — 45%</p>
-        <p>AI & ML — 20%</p>
-      </div>
-
-      <div class="card">
-        <h3>Recent Activity</h3>
-
-        <p>✓ Completed HTML Module</p>
-        <p>✓ Watched CSS Lesson</p>
-        <p>✓ Submitted Assignment</p>
-      </div>
-
-      <div class="card">
-        <h3>Achievements</h3>
-
-        <p>🏅 First Course Completed</p>
-        <p>🔥 7 Day Streak</p>
-        <p>🎯 Top Performer</p>
-      </div>
-
-    </div>
-
-    <!-- SECOND ROW -->
-
-    <div class="dashboard-cards">
-
-      <div class="card">
-        <h3>Learning Streak</h3>
-        <h2>12 Days</h2>
-      </div>
-
-      <div class="card">
-        <h3>Overall Progress</h3>
-        <h2>58%</h2>
-      </div>
-
-      <div class="card">
-        <h3>Upcoming Tasks</h3>
-
-        <p>JavaScript Quiz</p>
-        <p>Due Tomorrow</p>
-      </div>
-
-    </div>
+    <app-dashboard-stats></app-dashboard-stats>
 
   </main>
 
