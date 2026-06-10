@@ -1,0 +1,95 @@
+<div class="dashboard-container">
+
+  <aside class="sidebar">
+    <app-sidebar></app-sidebar>
+  </aside>
+
+  <main class="content">
+
+    <app-header></app-header>
+
+    <div class="knowledge-tree">
+      <div class="tree-container">
+
+        <img
+          src="/images/sakura-tree.png"
+          alt="Knowledge Tree"
+          class="tree-image"
+        />
+
+        <div class="course-circle web">
+          {{ totalUsers }} Users
+        </div>
+
+        <div class="course-circle database">
+          {{ totalCourses }} Courses
+        </div>
+
+        <div class="course-circle cloud">
+          {{ totalEnrollments }} Enrolled
+        </div>
+
+        <div class="course-circle ai">
+          Admin Panel
+        </div>
+
+      </div>
+    </div>
+
+    <div class="dashboard-cards">
+
+      <div class="card">
+        <h3>All Users</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.id }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>
+                <span class="badge" [class.admin]="user.role === 'admin'">
+                  {{ user.role }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>All Courses</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Level</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let course of courses">
+              <td>{{ course.id }}</td>
+              <td>{{ course.title }}</td>
+              <td>{{ course.level }}</td>
+              <td>
+                <span class="badge active-badge">{{ course.status }}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>

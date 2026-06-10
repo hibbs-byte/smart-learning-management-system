@@ -1,0 +1,208 @@
+.dashboard-container{
+  display:flex;
+  min-height:100vh;
+  background:#dbeaf0;
+  font-family: Georgia, serif;
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar{
+  width:260px;
+  background:#ffffff;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 0 20px rgba(0,0,0,0.05);
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+
+.content{
+  flex:1;
+  padding:35px;
+}
+
+/* ==========================
+   KNOWLEDGE TREE
+========================== */
+
+.knowledge-tree{
+  margin-top:20px;
+}
+
+.tree-container{
+  position:relative;
+  height:650px;
+  background:white;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.tree-image{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:850px;
+  max-width:90%;
+  z-index:1;
+}
+
+/* ==========================
+   STAT BLOSSOMS
+========================== */
+
+.course-circle{
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:#faf8f5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  font-size:22px;
+  font-weight:600;
+  color:#2d2424;
+  box-shadow:0 10px 30px rgba(0,0,0,0.10);
+  z-index:999;
+  transition:.3s ease;
+}
+
+.course-circle:hover{
+  transform:scale(1.05);
+}
+
+.web{
+  top:60px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.database{
+  left:130px;
+  top:230px;
+}
+
+.cloud{
+  right:130px;
+  top:230px;
+}
+
+.ai{
+  left:50%;
+  bottom:35px;
+  transform:translateX(-50%);
+}
+
+/* ==========================
+   DASHBOARD CARDS
+========================== */
+
+.dashboard-cards{
+  display:flex;
+  gap:25px;
+  margin-top:25px;
+}
+
+.card{
+  flex:1;
+  background:white;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.05);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+.card h3{
+  color:#2d2424;
+  margin-bottom:20px;
+  font-size:28px;
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+thead tr{
+  background:#f0f4f8;
+}
+
+th, td{
+  padding:12px 15px;
+  text-align:left;
+  font-size:14px;
+  border-bottom:1px solid #f0f4f8;
+}
+
+th{
+  color:#6e6e6e;
+  font-weight:600;
+}
+
+.badge{
+  padding:4px 12px;
+  border-radius:20px;
+  font-size:12px;
+  background:#e0f5e9;
+  color:#2e7d32;
+}
+
+.badge.admin{
+  background:#fce4ec;
+  color:#c62828;
+}
+
+.active-badge{
+  background:#e0f5e9;
+  color:#2e7d32;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1200px){
+
+  .dashboard-container{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+  }
+
+  .dashboard-cards{
+    flex-direction:column;
+  }
+
+  .tree-container{
+    height:800px;
+  }
+
+  .database{
+    left:40px;
+  }
+
+  .cloud{
+    right:40px;
+  }
+}

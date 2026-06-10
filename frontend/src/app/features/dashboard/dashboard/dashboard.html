@@ -8,36 +8,111 @@
 
     <app-header></app-header>
 
-    <div class="knowledge-tree">
+    <!-- Tree + Right Panel -->
+    <div class="tree-and-panel">
 
-      <div class="tree-container">
+      <!-- Knowledge Tree -->
+      <div class="knowledge-tree">
 
-        <img
-          src="/images/sakura-tree.png"
-          alt="Knowledge Tree"
-          class="tree-image"
-        />
+        <div class="tree-container">
 
-        <div class="course-circle web">
-          {{ courses[0]?.title || 'Angular Fundamentals' }}
+          <img
+            src="/images/sakura-tree.png"
+            alt="Knowledge Tree"
+            class="tree-image"
+          />
+
+          <div class="course-circle web">
+            <span class="circle-title">{{ courses[0]?.title || 'Angular Fundamentals' }}</span>
+            <span class="circle-pct">75% Complete</span>
+            <div class="circle-bar"><div class="circle-bar-fill" style="width:75%"></div></div>
+          </div>
+
+          <div class="course-circle database">
+            <span class="circle-title">{{ courses[1]?.title || 'Advanced Angular' }}</span>
+            <span class="circle-pct">60% Complete</span>
+            <div class="circle-bar"><div class="circle-bar-fill" style="width:60%"></div></div>
+          </div>
+
+          <div class="course-circle cloud">
+            <span class="circle-title">{{ courses[2]?.title || 'NodeJS Bootcamp' }}</span>
+            <span class="circle-pct">45% Complete</span>
+            <div class="circle-bar"><div class="circle-bar-fill" style="width:45%"></div></div>
+          </div>
+
+          <div class="tree-label">
+            <p>YOUR KNOWLEDGE TREE</p>
+            <p class="tree-label-jp">知識の木</p>
+          </div>
+
         </div>
 
-        <div class="course-circle database">
-          {{ courses[1]?.title || 'Advanced Angular' }}
+      </div>
+
+      <!-- Right Stats Panel -->
+      <div class="right-panel">
+
+        <div class="panel-card">
+          <div class="panel-card-header">
+            <h3>Learning Streak</h3>
+            <span class="sakura-icon">🌸</span>
+          </div>
+          <div class="streak-value">🔥 12 Days</div>
+          <p class="streak-sub">Keep it up! You're doing great!</p>
+          <div class="streak-days">
+            <div class="day-dot done">M</div>
+            <div class="day-dot done">T</div>
+            <div class="day-dot done">W</div>
+            <div class="day-dot done">T</div>
+            <div class="day-dot done">F</div>
+            <div class="day-dot">S</div>
+            <div class="day-dot">S</div>
+          </div>
         </div>
 
-        <div class="course-circle cloud">
-          {{ courses[2]?.title || 'NodeJS Bootcamp' }}
+        <div class="panel-card">
+          <div class="panel-card-header">
+            <h3>Overall Progress</h3>
+            <span class="sakura-icon">🌸</span>
+          </div>
+          <div class="overall-progress">
+            <div class="donut-wrapper">
+              <svg viewBox="0 0 80 80" class="donut-svg">
+                <circle cx="40" cy="40" r="32" fill="none" stroke="#f0f0f0" stroke-width="8"/>
+                <circle cx="40" cy="40" r="32" fill="none" stroke="#e07b5a" stroke-width="8"
+                  stroke-dasharray="134 67" stroke-linecap="round"
+                  transform="rotate(-90 40 40)"/>
+              </svg>
+              <div class="donut-label">58%<br><small>Completed</small></div>
+            </div>
+            <div class="progress-legend">
+              <div class="legend-item"><span class="dot orange"></span> 3 Courses Enrolled</div>
+              <div class="legend-item"><span class="dot blue"></span> 2 Completed</div>
+              <div class="legend-item"><span class="dot grey"></span> 1 In Progress</div>
+            </div>
+          </div>
         </div>
 
-        <div class="course-circle ai">
-          {{ courses[0]?.level || 'Beginner' }}
+        <div class="panel-card">
+          <div class="panel-card-header">
+            <h3>Upcoming Task</h3>
+            <span class="sakura-icon">🌸</span>
+          </div>
+          <div class="task-row">
+            <div class="task-icon">📅</div>
+            <div class="task-info">
+              <p class="task-name">JavaScript Quiz</p>
+              <p class="task-date">12th June 2025</p>
+            </div>
+            <button class="start-btn">Start Now</button>
+          </div>
         </div>
 
       </div>
 
     </div>
 
+    <!-- Stats Cards Below -->
     <app-dashboard-stats></app-dashboard-stats>
 
   </main>
