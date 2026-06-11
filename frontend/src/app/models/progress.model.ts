@@ -25,8 +25,8 @@ export interface Question {
 }
 
 export interface AssessmentAttempt {
-  id?: number;
-  assessmentId: number;
+  id?: number | string;
+  assessmentId: number | string;
   userId: number;
   score: number;
   status: 'passed' | 'failed';

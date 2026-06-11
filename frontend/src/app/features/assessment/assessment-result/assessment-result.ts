@@ -21,11 +21,11 @@ export class AssessmentResult implements OnInit {
   loading = signal(true);
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = this.route.snapshot.paramMap.get('id') ?? '';
     this.assessmentService.getAttemptById(id).subscribe({
       next: (attempt) => {
         this.attempt.set(attempt);
-        this.assessmentService.getAssessment(attempt.assessmentId).subscribe({
+        this.assessmentService.getAssessment(Number(attempt.assessmentId)).subscribe({
           next: (a) => {
             this.assessment.set(a);
             this.loading.set(false);

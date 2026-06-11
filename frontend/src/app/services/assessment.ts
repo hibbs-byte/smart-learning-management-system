@@ -28,7 +28,7 @@ export class AssessmentService {
     return this.http.get<AssessmentAttempt[]>(`${this.base}/assessmentAttempts?userId=${userId}`);
   }
 
-  getAttemptById(id: number): Observable<AssessmentAttempt> {
+  getAttemptById(id: number | string): Observable<AssessmentAttempt> {
     return this.http.get<AssessmentAttempt>(`${this.base}/assessmentAttempts/${id}`);
   }
 
